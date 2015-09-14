@@ -28,6 +28,19 @@ this demo will process the mardown files("*.md") in the `wiki` folder,
 use the default template engine - [lodash](https://lodash.com/docs#template).
 And copy the markdown files to the `output` folder.
 
+first you should download this demo and install dependency packages:
+
+```bash
+git clone git@github.com:snowyu/isdk-demo.js.git isdk-demo
+cd isdk-demo/
+npm install
+```
+
+At last run the magic in the `isdk-demo` folder:
+
+    npm run build
+
+
 ### Configuration items
 
 * dest *(String)*: The destination directory to output(optional).
