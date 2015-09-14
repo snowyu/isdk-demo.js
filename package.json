@@ -1,0 +1,62 @@
+{
+  "name": "isdk-demo",
+  "description": "just a isdk demo",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "https://github.com/snowyu/isdk-demo.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/snowyu/isdk-demo.js.git"
+  },
+  "main": "./lib",
+  "files": [
+    "README.md",
+    "LICENSE-MIT",
+    "*.js",
+    "*.coffee",
+    "test",
+    "src",
+    "lib"
+  ],
+  "keywords": [
+    "isdk",
+    "demo",
+    "example"
+  ],
+  "dependencies": {
+    "task-registry": "^0.2.3",
+    "task-registry-file-copy": "0.0.1",
+    "task-registry-file-mkdir": "^0.1.0",
+    "task-registry-file-template": "^0.1.0",
+    "task-registry-isdk": "0.0.4",
+    "task-registry-template-engine": "^0.2.0",
+    "task-registry-template-engine-lodash": "0.0.1"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "build": "node lib/index",
+    "coffee-build": "coffee -o lib -c src"
+  },
+  "contributors": [
+    {
+      "name": "Riceball LEE",
+      "email": "snowyu.lee@gmail.com",
+      "url": "https://github.com/snowyu"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Riceball LEE",
+      "email": "snowyu.lee@gmail.com"
+    }
+  ],
+  "pre-commit": [
+    "coffee-build"
+  ],
+  "bugs": {
+    "url": "https://github.com/snowyu/isdk-demo.js/issues"
+  },
+  "license": "MIT",
+  "stability": "unstable"
+}
