@@ -5,7 +5,11 @@ tasks:
   - mkdir
   - echo
   - template
-  - copy
+  - copy:
+      <: #inherited params
+        overwrite: false
+  - echo:
+      hi: 'this a echo string'
 src:
   - "**/*.md"
   - "**/"
@@ -14,6 +18,9 @@ src:
   - "!./output" #ignore the output dir.
 logger:
   level: debug
+overwrite: true
+force: false
+raiseError: false
 ---
 
 ## ISDK Demo
@@ -40,21 +47,33 @@ At last run the magic in the `isdk-demo` folder:
 
     npm run build
 
+now try again, it will report an error on copy task:
+
+    EEXIST
+
+This means the dest file is already exists.
+
+You can set the `overwrite` option to true to avoid this.
 
 ### Configuration items
 
-* dest *(String)*: The destination directory to output(optional).
+* `dest` *(String)*: The destination directory to output(optional).
   defaults to "./public".
-* cwd *(String)*: The current working directory to process(optional).
-  defaults to '.'
-* src *(String|Array String)*: The source file filter.
+* `cwd` *(String)*: The current working directory to process(optional).
+  defaults to '.', this option only for the root folder of project.
+* `src` *(String|Array String)*: The source file filter.
   * The first letter "!" indicates a mismatch.
     * Note: The order is important, if the first one is not match, then the latter match all are failed.
   * `"**"` Indicates match any subdirectory
-* tasks: the task list to execute，task list according to the order they appear, one by one. Only for the files(not directories).
-* logger: the configuraion options of the logger
+* `tasks`: the task list to execute，task list according to the order they appear, one by one. Only for the files(not directories).
+* `logger`: the configuraion options of the logger
   * level: the logging level, defaults to 'error'
-
+* `overwrite` *(Boolean)*: whether overwrite the already exist files.
+  default to false.
+* `force` *(Boolean)*: whether force to continue even though some error occur.
+  default to false.
+* `raiseError` *(Boolean)*: whether throw error exception.
+  default to false.
 
 ### tasks
 
@@ -68,6 +87,8 @@ At last run the magic in the `isdk-demo` folder:
   * `...`: the specified engine options(optional).
 * [copy][copy] task: copy the file to the dest.
   * dest *(String)*: the dest folder or file name.
+  * overwrite *(Boolean)*: whether overwrite the dest file if it's exist.
+    default to false.
 
 ## License
 
