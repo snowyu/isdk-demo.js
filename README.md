@@ -1,6 +1,6 @@
 ---
-cwd: ./wiki   # change the current working directory to process.
-dest: ./output # change the dest directory to output.
+cwd: ./wiki     # change the current working directory to process.
+dest: ./output/ # change the dest directory to output.
 tasks:
   - mkdir
   - echo

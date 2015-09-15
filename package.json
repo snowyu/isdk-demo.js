@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "task-registry": "^0.2.3",
-    "task-registry-file-copy": "^0.1.2",
+    "task-registry-file-copy": "^0.1.3",
     "task-registry-file-mkdir": "^0.1.0",
     "task-registry-file-template": "^0.1.0",
     "task-registry-isdk": "0.0.7",

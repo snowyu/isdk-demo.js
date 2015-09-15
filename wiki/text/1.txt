@@ -1,0 +1,4 @@
+---
+as: true
+---
+this is a text file to test write to ${dest}.
