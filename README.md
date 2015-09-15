@@ -56,8 +56,25 @@ At last run the magic in the `isdk-demo` folder:
   * level: the logging level, defaults to 'error'
 
 
+### tasks
+
+* [mkdir][mkdir] task: Create a new directory and any necessary subdirectories at dest path.
+  * dest *(String)*: the new directory to create.
+* [echo][echo] task: just echo the input options object argument to the result output.
+  * you can test the arguments of a task here.
+* [template][template] task: Process the contents of a file via the default template
+  engine(the first registered template engine).
+  * engine *(String)*: the template engine name(optional).
+  * `...`: the specified engine options(optional).
+* [copy][copy] task: copy the file to the dest.
+  * dest *(String)*: the dest folder or file name.
+
 ## License
 
 MIT
 
 [front-matter]: http://jekyllrb.com/docs/frontmatter/
+[mkdir]: https://github.com/snowyu/task-registry-file-mkdir.js
+[echo]: ./src/tasks/echo.coffee
+[template]: https://github.com/snowyu/task-registry-file-template.js
+[copy]: https://github.com/snowyu/task-registry-file-copy.js

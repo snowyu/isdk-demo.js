@@ -6,6 +6,6 @@ module.exports = class EchoTask
   register EchoTask
   aliases EchoTask, 'echo'
 
-  _executeSync: (aOptions)->
-    aOptions
+  _executeSync: (aFile)->
+    aFile
 
