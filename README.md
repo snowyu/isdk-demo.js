@@ -7,7 +7,7 @@ tasks:
   - template
   - copy:
       <: #inherited params
-        overwrite: false
+        overwrite: false # this is the highest prior.
   - echo:
       hi: 'this a echo string'
 src:
@@ -30,9 +30,13 @@ It's just a beginning.
 
 The distinguishing features of the ISDK building are:
 
-* the index file(`README.md`) of a Folder is the folder's configuration.
-* the folder(directory) tree is the inheritance tree.
-  * the configuration of the file or subdirectory inherits from the parent directory.
+* Each file are an object. The folder(directory) is a special file object too.
+* Each file could have configuration. These configuration items are the additional
+  attributes to the file object.
+* The index file(`README.md`) of a Folder is the folder's configuration.
+* The folder(directory) tree is the inheritance tree of the file object.
+  * The configuration of the file or subdirectory inherits from the parent directory.
+
 
 This `README.md` file is the root configuration file of the folder.
 The configuration is the [front-matter][front-matter] at top of the file.
