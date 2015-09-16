@@ -73,13 +73,13 @@ You can set the `overwrite` option to true to avoid this.
     * Note: The order is important, if the first one is not match, then the latter match all are failed.
   * `"**"` Indicates match any subdirectory
 * `tasks`: the task list to execute，task list according to the order they appear, one by one. Only for the files(not directories).
+  * `force` *(Boolean)*: whether force to continue even though some error occur.
+    default to false.
+  * `raiseError` *(Boolean)*: whether throw error exception.
+    default to false.
 * `logger`: the configuraion options of the logger
   * level: the logging level, defaults to 'error'
-* `overwrite` *(Boolean)*: whether overwrite the already exist files.
-  default to false.
-* `force` *(Boolean)*: whether force to continue even though some error occur.
-  default to false.
-* `raiseError` *(Boolean)*: whether throw error exception.
+* `overwrite` *(Boolean)*: whether overwrite the already exist files. used via [copy][copy] task.
   default to false.
 
 ### tasks
@@ -96,6 +96,10 @@ You can set the `overwrite` option to true to avoid this.
   * dest *(String)*: the dest folder or file name.
   * overwrite *(Boolean)*: whether overwrite the dest file if it's exist.
     default to false.
+
+
+**Note:** The default argument(object) passed to the task is this file object if no
+specifed the parameter of the task.
 
 ## License
 
