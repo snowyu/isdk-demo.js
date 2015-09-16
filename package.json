@@ -28,10 +28,11 @@
     "task-registry-file-copy": "^0.1.4",
     "task-registry-file-mkdir": "^0.1.0",
     "task-registry-file-template": "^0.1.0",
-    "task-registry-isdk": "0.0.7",
+    "task-registry-isdk": "0.0.8",
     "task-registry-resource": "^0.1.0",
     "task-registry-template-engine": "^0.2.0",
-    "task-registry-template-engine-lodash": "0.0.1"
+    "task-registry-template-engine-lodash": "0.0.1",
+    "yargs": "^3.25.0"
   },
   "devDependencies": {},
   "scripts": {
