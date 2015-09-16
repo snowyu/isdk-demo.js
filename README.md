@@ -64,7 +64,10 @@ now try again, it will report an error on copy task:
 
 This means the dest file is already exists.
 
-You can set the `overwrite` option to true to avoid this.
+You can set the `overwrite` option in the `copy` task to true to avoid this.
+or delete this argument in the `copy` task simply. the file's overwrite option would
+be avaiable.
+
 
 ### Configuration items
 
