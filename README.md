@@ -25,15 +25,22 @@ raiseError: false
 
 ## ISDK Demo
 
-This demos the isdk building concert and how to process the folder.
-It's just a beginning. Many things need to implement.
+This file shows the isdk building concept and how to process the folder.
+It's just a beginning.
+
+The distinguishing features of the ISDK building are:
+
+* the index file(`README.md`) of a Folder is the folder's configuration.
+* the folder(directory) tree is the inheritance tree.
+  * the configuration of the file or subdirectory inherits from the parent directory.
 
 This `README.md` file is the root configuration file of the folder.
 The configuration is the [front-matter][front-matter] at top of the file.
 
-this demo will process the mardown files("*.md") in the `wiki` folder,
+This demo will process the mardown files("*.md") in the `wiki` folder,
+and the text files("*.txt") int the `wiki/text` folder,
 use the default template engine - [lodash](https://lodash.com/docs#template).
-And copy the markdown files to the `output` folder.
+And copy these files to the `output` folder.
 
 first you should download this demo and install dependency packages:
 
