@@ -4,6 +4,7 @@ require 'task-registry-template-engine-lodash'
 require 'task-registry-file-template'
 require 'task-registry-file-copy'
 require 'task-registry-file-mkdir'
+require 'task-registry-file-layout'
 require 'task-registry-isdk' #register the isdk task
 require './tasks/echo'
 
